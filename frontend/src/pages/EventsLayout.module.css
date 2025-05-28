@@ -1,0 +1,11 @@
+.main {
+  padding: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding: var(--space-lg) var(--space-xl);
+  }
+}

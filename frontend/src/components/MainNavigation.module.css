@@ -1,22 +1,60 @@
 .header {
-  max-width: 60rem;
+  max-width: 1200px;
   margin: auto;
-  padding: 2rem;
+  padding: var(--space-lg) var(--space-xl);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background-color: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-md);
 }
 
 .list {
   display: flex;
-  gap: 1rem;
+  gap: var(--space-lg);
 }
 
 .list a {
   text-decoration: none;
+  color: var(--color-gray-300);
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius-md);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.list a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary-400);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.list a:hover {
+  color: var(--color-primary-300);
+}
+
+.list a:hover::after {
+  width: 80%;
+}
+
+.list a.active {
   color: var(--color-primary-400);
 }
 
-.list a:hover,
-.list a.active {
-  color: var(--color-primary-800);
+.list a.active::after {
+  width: 100%;
+  background-color: var(--color-primary-500);
 }

@@ -1,32 +1,97 @@
 .event {
-  max-width: 50rem;
-  margin: 2rem auto;
-  text-align: center;
+  max-width: 900px;
+  margin: var(--space-xl) auto;
+  background-color: var(--color-gray-800);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .event img {
-  width: 30rem;
-  border-radius: 4px;
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.event-content {
+  padding: var(--space-xl);
+  text-align: left;
+}
+
+.event h1 {
+  margin: 0 0 var(--space-md) 0;
+  color: var(--color-primary-300);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.event h2 {
+  margin: var(--space-lg) 0 var(--space-sm) 0;
+  color: var(--color-primary-400);
+  font-size: 1.5rem;
+}
+
+.event time {
+  display: inline-block;
+  margin-bottom: var(--space-lg);
+  padding: var(--space-xs) var(--space-md);
+  background-color: var(--color-primary-900);
+  color: white;
+  border-radius: var(--border-radius-full);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.event p {
+  margin: var(--space-md) 0;
+  color: var(--color-gray-200);
+  line-height: 1.7;
+  font-size: 1.1rem;
 }
 
 .actions {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
   padding: 0;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .actions a,
 .actions button {
-  padding: 0.25rem 1rem;
+  padding: var(--space-sm) var(--space-lg);
   text-decoration: none;
   font: inherit;
   cursor: pointer;
+  font-weight: 500;
+  border-radius: var(--border-radius-md);
+  transition: all 0.3s ease;
+}
+
+.actions a {
+  background-color: var(--color-primary-700);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.actions a:hover {
+  background-color: var(--color-primary-600);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .actions button {
   background-color: transparent;
-  border: none;
-  color: var(--color-primary-800);
+  border: 1px solid var(--color-accent-500);
+  color: var(--color-accent-400);
+}
+
+.actions button:hover {
+  background-color: rgba(255, 87, 34, 0.1);
+  color: var(--color-accent-300);
+  transform: translateY(-2px);
 }

@@ -1,0 +1,24 @@
+.main {
+  margin-top: 0;
+  min-height: calc(100vh - 80px);
+  background-color: var(--color-gray-900);
+  position: relative;
+}
+
+.main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .main {
+    min-height: calc(100vh - 60px);
+  }
+}
