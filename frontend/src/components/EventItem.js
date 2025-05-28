@@ -1,5 +1,5 @@
 import classes from './EventItem.module.css';
-import {Link, redirect, useSubmit} from "react-router-dom";
+import {Link, useSubmit} from "react-router-dom";
 
 function EventItem({ event }) {
     const submit = useSubmit();
